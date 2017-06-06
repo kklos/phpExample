@@ -1,5 +1,9 @@
 <?php
 require_once('connect.php');
+session_start();
+if (!isset($_SESSION['username'])){
+	header( 'location: login.php' );
+	} else{
 $ReadSql = "SELECT * FROM `crud`";
 $res = mysqli_query($connection, $ReadSql);
 ?>
@@ -97,3 +101,4 @@ $res = mysqli_query($connection, $ReadSql);
 
 </body>
 </html>
+<?php } ?>

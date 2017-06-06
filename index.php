@@ -1,5 +1,9 @@
 <?php
 require_once ('connect.php');
+session_start();
+if (!isset($_SESSION['username'])){
+	header( 'Location: login.php' );
+	} else{
 if(isset($_POST) & !empty($_POST)){
 	$fname = mysql_real_escape_string($_POST['fname']);
 	$lname = mysql_real_escape_string($_POST['lname']);
@@ -14,6 +18,8 @@ if(isset($_POST) & !empty($_POST)){
 	}else{
 		$fmsg = "Data not inserted, please try again later.";
 	}
+
+
 }
 ?>
 <!DOCTYPE html>
@@ -91,3 +97,4 @@ if(isset($_POST) & !empty($_POST)){
 </div>
 </body>
 </html>
+<?php } ?>
