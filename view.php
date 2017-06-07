@@ -29,6 +29,7 @@ $res = mysqli_query($connection, $ReadSql);
 <body>
 <div class="container">
 	<div class="row">
+  <a href='logout.php'>Logout</a>
 	<h2>Read Operation in CRUD applicaiton</h2>
 		<table class="table ">
 		<thead>

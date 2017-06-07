@@ -22,8 +22,8 @@ $fmsg = "Invalid Login Credentials.";
 }
 //3.1.4 if the user is logged in Greets the user with message
 if (isset($_SESSION['username'])){
+header("location: view.php");
 
-echo "<a href='logout.php'>Logout</a>";
 
 }else{
 //3.2 When the user visits the page first time, simple login form will be displayed.
